@@ -1,0 +1,26 @@
+#scale_table {
+  height: $scale_height;
+  position: fixed;
+  top: 0;
+  margin-top: $header_height; /* for header */
+  z-index: $scale_depth;
+
+  background-color: white;
+  box-shadow: 0 $shadow_shift $shadow_fade $shadow_white;
+
+  font-size: $scale_font_size;
+}
+
+#scale_timeline {
+  overflow: hidden;
+}
+
+.scale {
+  width: $scale_width;
+  height: $scale_height;
+  position: absolute;
+  margin-left: ($scale_width / 2) * -1; // to center the scale
+  line-height: $scale_height;
+  text-align: center;
+  color: black;
+}

@@ -1,0 +1,102 @@
+// breakpoints
+$smartphone_breakpoint: 640px;
+$tablet_breakpoint: 800px;
+
+// font weight
+$font_weight_general: 300;
+$font_weight_bold: 700;
+
+// general
+$margin_between_rows: 10px;
+$root_font_size: 16px;
+
+// shadow
+$shadow_shift: 4px;
+$shadow_fade: 5px;
+
+// header
+$header_height: 40px;
+$header_horizontal_padding: 8px;
+$header_date_font_size: 1.2rem;
+$header_icon_size: 20px;
+$header_icon_font_size: 1.0rem;
+
+// header icon
+$header_icon_border_radius: 5px;
+$header_icon_horizontal_margin: 15px;
+
+// scale
+$scale_width: 40px; // should be even and more than HORIZONTAL_MARGIN (in js) * 2
+$scale_height: 30px;
+$scale_font_size: 0.9rem;
+
+// current line
+$current_line_thickness: 2px;
+
+// row heading
+$row_heading_width: 20%;
+
+// row title
+$row_title_padding: 4px;
+$row_title_edge_width: 4px;
+$main_title_line_height: 16px;
+$main_title_font_size: $main_title_line_height - 2px;
+$sub_title_line_height: 14px;
+$sub_title_font_size: $sub_title_line_height - 2px;
+
+// period view
+$period_name_font_size: 12px;
+$period_band_width: 8px;
+$period_view_vertical_margin: 7px;
+$period_view_with_name_height: $period_view_vertical_margin * 3 + $period_name_font_size + $period_band_width;
+$period_view_without_name_height: $period_view_vertical_margin * 2 + $period_band_width;
+
+// bus view
+$bus_lane_width: 22px;  // common to const.js
+$bus_circle_radius: 5px;
+$bus_line_thickness: 3.1px;
+$double_bus_font_size: 8px;
+$micro_disease_size: 7px;
+$micro_disease_margin_top: 2px;
+$micro_disease_border_width: 2px;
+
+// modal window background
+$modal_window_background_overflow: 50%;
+$modal_window_background_height: 100% + $modal_window_background_overflow * 2;
+
+// modal window (outer)
+$modal_window_width_px: 640px;
+$modal_window_width_percentage: 90%;
+$modal_window_max_height: 90%;
+$modal_window_border_radius: 3px;
+$modal_window_padding: 16px;
+
+// modal window (inner)
+$modal_window_vertical_margin: 10px; // margin between items
+
+$modal_window_title_font_size: 1.3rem;
+$modal_window_title_bar_height: 56px;
+
+$margin_between_td: 10px;
+$modal_window_table_header_font_size: 0.8rem;
+$modal_window_table_data_font_size: 0.9rem;
+
+$annotation_default_font_size: 0.85rem;
+$annotation_important_font_size: 0.9rem;
+$annotation_line_height: 150%;
+
+// list
+$list_font_size: 1rem;
+$list_vertical_padding: 16px;
+
+// snackbar
+$snackbar_horizontal_padding: 24px;
+$snackbar_vertical_padding: 14px;
+$snackbar_font_size: 0.9rem;
+$snackbar_fixed_width: 500px;
+$snackbar_round: 2px;
+
+// footer
+$footer_margin_top: 20px;
+$footer_vertical_padding: 30px;
+$footer_horizontal_padding: 10px;

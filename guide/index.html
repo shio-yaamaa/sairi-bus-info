@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>再履バス案内の使い方</title>
+    <meta content="再履バス案内の使い方の説明です。" name="description" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta href="favicon.ico" rel="shortcut icon" />
+    <link href="../style_sub.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  </head>
+  <body>
+    <article>
+      <h1>再履バス案内の使い方</h1>
+      <div id="toc"></div>
+      <p>JavaScriptを有効にしてお使いください。</p>
+      <h2>画面全体</h2>
+      <img src="../image/whole.png">
+      <p>ヘッダー(上)と見出し(左)と中身(真ん中)があります。</p>
+      <h2>ヘッダー</h2>
+      <img src="../image/header.png">
+      <p>現在の日付(日本時間)と、いくつかのボタンがあります。</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>現在時刻へ</td>
+            <td>中身が現在時刻までスクロールします。</td>
+          </tr>
+          <tr>
+            <td>表示設定</td>
+            <td>表示する項目を設定できます。</td>
+          </tr>
+          <tr>
+            <td>リンク</td>
+            <td>大阪大学公式の時間情報などへのリンクです。</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>見出し</h2>
+      <img src="../image/heading.png">
+      <p>時間を表示する項目のタイトルが縦に並んでいます。</p>
+      <h3>バス</h3>
+      <img src="../image/bus_heading.png">
+      <p>上に一つ区間が、下に方向がいくつか表示されます。上の画像では、「豊-吹(豊中・吹田間の略)」が区間、「工>人>豊」と「豊>コ>工」が方向です。</p>
+      <div class="framed">
+        <p>「工>人>豊」は「工学部前→人間科学部前→豊中地区」の略で、「豊>コ>工」は「豊中地区→コンベンションセンター前→工学部前」の略です。何の略かわからなくなったら、その文字上をクリックしてみてください。下図のように、正式名称が表示されます。</p>
+        <img src="../image/snackbar_bus.png">
+      </div>
+      <h3>図書館・食堂</h3>
+      <p>見出しをクリックすると、</p>
+      <img src="../image/snackbar_restaurant.png">
+      <p>上のように名前と営業時間が表示されます。</p>
+      <h2>中身</h2>
+      <p>10分ごとに薄い目盛りが入っています。</p>
+      <h3>現在時刻</h3>
+      <img src="../image/current_line.png">
+      <p>現在時刻は赤い線で表されています。終わってしまったもの(線より左にあるもの)は半透明に表示されます。</p>
+      <h3>バス</h3>
+      <img src="../image/three_stops.png">
+      <p>この一本の横線がバスの一つの便を表します。もしこのタイトルが「工>人>豊」だったら、一つ目の●が「工学部前」、二つ目が「人間科学部前」、三つ目が「豊中地区」で停まることを意味します。</p>
+      <h4>変わった運行</h4>
+      <img src="../image/two_buses.png">
+      <p>上のように一つ目の●に「2」という文字が書かれている便は、2本運行することを表します。</p>
+      <img src="../image/micro_disease.png">
+      <p>一つ目の●に触覚が生えている場合は、そのバスは微生物病研究所(降車専用)で停留します。</p>
+      <h4>詳細</h4>
+      <p>バスの便をクリックすると、</p>
+      <img src="../image/detail_modal_window.png">
+      <p>上のような詳細ウィンドウが表示されます。<br>
+      閉じる際には、ウィンドウの外側か右上の×ボタンをクリックしてください。ブラウザの戻るボタンで閉じることはできません。</p>
+      <h3>図書館・食堂</h3>
+      <p>図書館・食堂も、棒をクリックすると詳細ダイアログが表示されます。</p>
+      <h2>休日・祝日</h2>
+      バスは休日・祝日・長期休暇や学校行事などの日に運休します。休日と祝日には「運行しない可能性があります」と警告を表示していますが、長期休暇や学校行事の日には特に何も表示しません。後でそういう機能つけるかも
+      <h2>このサイトに素早くアクセスする</h2>
+      <ul>
+        <li>PCから: お気に入りに追加するか、任意のフォルダにショートカットを作成してください。</li>
+        <li>スマホから: お気に入りに追加するか、ホーム画面にショートカットを追加してください。</li>
+      </ul>
+      <div class="framed">
+        <p>たとえばiPhoneのSafariでは、下の画像のようにwebサイトをホーム画面に追加することで、普通のアプリのように起動することができるようになります。</p>
+        <img src="../image/add_to_home.png">
+      </div>
+
+      <a class="button" href="../">サイトに戻る</a>
+    </article>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="../js/toc.js"></script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+.row_title {
+
+  * {
+    white-space: nowrap;
+  }
+
+  .row_title_edge {
+    width: 100%;
+    height: 100%;
+    border-left: $row_title_edge_width red solid;
+    padding-left: $row_title_padding;
+
+    &:nth-child(n+2) {
+      margin-top: $margin_between_rows;
+    }
+
+    @mixin row_main_title($with_sub_title) {
+      width: 100%;
+      height: if(
+        $with_sub_title,
+        $main_title_line_height,
+        $period_view_with_name_height
+      );
+      font-size: $main_title_font_size;
+      line-height: if(
+        $with_sub_title,
+        $main_title_line_height,
+        $period_view_with_name_height
+      );
+    }
+
+    .row_main_title_with_sub_title {
+      @include row_main_title(true);
+    }
+
+    .row_main_title_without_sub_title {
+      @include row_main_title(false);
+    }
+
+    @mixin row_sub_title($align_middle) {
+      width: 100%;
+      height: $period_view_without_name_height;
+      font-size: $sub_title_font_size;
+      @if $align_middle {
+        line-height: $period_view_without_name_height;
+      }
+      @include click_effect;
+    }
+
+    .row_sub_title_align_middle {
+      @include row_sub_title(true);
+    }
+
+    .row_sub_title_no_align {
+      @include row_sub_title(false);
+    }
+
+  }
+
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>再履バス案内</title>
+    <meta content="大阪大学の再履バスなどの時間を表示します。" name="description" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
+    <meta href="favicon.ico" rel="shortcut icon" />
+    <link href="style_pc.css" rel="stylesheet" media="screen and (min-width: 640px)" />
+    <link href="style_smartphone.css" rel="stylesheet" media="screen and (max-width: 639px)" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  </head>
+  <body link="black" vlink="black" alink="black">
+    <header>
+      <p id="date">JavaScriptを有効にしてください</p>
+      <div class="header_icon" id="current_time_icon">
+        <i class="material-icons">&#xE8B5;</i>
+        <span class="header_icon_description">現在時刻へ</span>
+      </div>
+      <div class="header_icon" id="visibility_icon">
+        <i class="material-icons">&#xE8F4;</i>
+        <span class="header_icon_description">表示・非表示</span>
+      </div>
+      <div class="header_icon" id="link_icon">
+        <i class="material-icons">&#xE89D;</i>
+        <span class="header_icon_description">リンク</span>
+      </div>
+    </header>
+    <article>
+      <div class="table" id="scale_table">
+        <div class="row_heading"></div>
+        <div class="timeline" id="scale_timeline"></div>
+      </div>
+      <div class="table" id="content_table">
+        <div class="row_heading container" id="row_title_container">
+          <div id="classwork_title_container"></div>
+          <div id="bus_title_container"></div>
+          <div id="library_title_container"></div>
+          <div id="restaurant_title_container"></div>
+        </div>
+        <div class="timeline" id="content_timeline">
+          <canvas id="ruled_view"></canvas>
+          <div class="container">
+            <div class="classwork_row" id="classwork_content"></div>
+            <div id="bus_content"></div>
+            <div class="main_content" id="library_content"></div>
+            <div class="main_content" id="restaurant_toyonaka_content"></div>
+            <div class="main_content" id="restaurant_suita_content"></div>
+            <div class="main_content" id="restaurant_minoh_content"></div>
+          </div>
+          <div id="current_line"></div>
+        </div>
+      </div>
+      <div id="modal_window_background"></div>
+      <div class="modal_window_container" id="detail_modal_window_container">
+        <div class="modal_window" id="detail_modal_window">
+          <div class="modal_window_title_bar">
+            <p class="modal_window_title" id="detail_modal_window_title"></p>
+            <i class="material-icons">&#xE5CD;</i>
+          </div>
+          <div class="modal_window_content">
+            <table class="detail_table">
+              <tr>
+                <th></th>
+                <th>時間</th>
+                <th>残り時間</th>
+              </tr>
+            </table>
+            <ul class="annotation_ul">
+              <li id="annotation_two_buses">この便は2台運行します</li>
+              <li id="annotation_micro_disease">微生物病研究所前(降車専用)に停車します</li>
+              <li class="important_annotation" id="annotation_holiday">本日は休日です。運行しない可能性があります</li>
+            </ul>
+            <div><a id="bus_tweet_link" target="_blank">このバスに乗っているとツイートする</a><div>
+          </div>
+        </div>
+      </div>
+      <div class="modal_window_container" id="visibility_modal_window_container">
+        <div class="modal_window" id="visibility_modal_window">
+          <div class="modal_window_title_bar">
+            <p class="modal_window_title" id="visibility_modal_window_title"></p>
+            <i class="material-icons">&#xE5CD;</i>
+          </div>
+          <div class="modal_window_content">
+            <ul id="visibility_list"></ul>
+          </div>
+        </div>
+      </div>
+      <div class="modal_window_container" id="link_modal_window_container">
+        <div class="modal_window" id="link_modal_window">
+          <div class="modal_window_title_bar">
+            <p class="modal_window_title" id="link_modal_window_title"></p>
+            <i class="material-icons">&#xE5CD;</i>
+          </div>
+          <div class="modal_window_content">
+            <ul id="link_list"></ul>
+          </div>
+        </div>
+      </div>
+      <div id="snackbar"></div>
+    </article>
+    <footer>
+      <ul>
+        <a href="about"><li>このサイトについて</li></a>
+        <a href="guide"><li>使い方</li></a>
+      </ul>
+      <div id="android">
+        <p>
+          Androidアプリ版「再履バス案内」も公開しています。<br>
+        </p>
+        <a href='https://play.google.com/store/apps/details?id=com.hatenadiary.yaamaa.sairibus'>
+          <img height="55" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/>
+        </a>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+    <script src="js/user_agent.js"></script>
+    
+    <script src="js/const.js"></script>
+    <script src="js/utility.js"></script>
+    <script src="js/time.js"></script>
+    <script src="js/general.js"></script>
+    <script src="js/cookie.js"></script>
+    <script src="js/holiday.js"></script>
+    <script src="js/tweet.js"></script>
+
+    <script src="js/header.js"></script>
+    <script src="js/ruled_view.js"></script>
+    <script src="js/row_title.js"></script>
+    <script src="js/period_view.js"></script>
+    <script src="js/bus_view.js"></script>
+
+    <script src="js/modal_window.js"></script>
+    <script src="js/detail_modal_window.js"></script>
+    <script src="js/visibility_modal_window.js"></script>
+    <script src="js/link_modal_window.js"></script>
+    <script src="js/snackbar.js"></script>
+
+    <script src="js/json_handler.js"></script>
+  </body>
+</html>

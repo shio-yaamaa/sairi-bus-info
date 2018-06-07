@@ -1,0 +1,23 @@
+#snackbar {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 100%;
+  margin: auto; // necessary for centering
+  padding: $snackbar_vertical_padding $snackbar_horizontal_padding;
+
+  visibility: hidden;
+
+  font-size: $snackbar_font_size;
+  word-wrap: break-word;
+  color: $snackbar_font_color;
+  background-color: $snackbar_background_color;
+  z-index: $snackbar_depth;
+
+  @media (min-width: $smartphone_breakpoint) {
+    width: $snackbar_fixed_width;
+    border-radius: $snackbar_round;
+  }
+}

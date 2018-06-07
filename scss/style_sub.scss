@@ -1,0 +1,153 @@
+@import "https://fonts.googleapis.com/earlyaccess/notosansjp.css";
+
+// dimen
+$breakpoint: 1080px;
+$indent: 40px;
+$h2_border_width: 5px;
+
+// font-weight
+$font_weight_normal: 300;
+$font_weight_normal_bold: 400;
+$font_weight_title_normal: 500;
+$font_weight_title_bold: 700;
+
+// color
+$link_color: #419df3;
+
+@import "toc";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: $font_weight_normal;
+  font-size: 16px;
+}
+
+article {
+  width: 1000px;
+  @media (max-width: $breakpoint) {
+    width: 100%;
+  }
+  height: auto;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, h2 {
+  @media (min-width: $breakpoint) {
+    margin-left: $indent * -1;
+    margin-right: $indent * -1;
+  }
+}
+
+h1 {
+  font-size: 1.8em;
+  font-weight: $font_weight_title_bold;
+}
+
+h2 {
+  padding: 12px 20px;
+  @media (min-width: $breakpoint) {
+    padding-left: $indent - $h2_border_width;
+  }
+  font-size: 1.3em;
+  //line-height: 200%;
+  font-weight: $font_weight_title_normal;
+
+  background-color: rgba(0, 0, 0, 0.05);
+  border-left: solid $h2_border_width purple;
+}
+
+h3 {
+  padding: 5px 5px;
+  font-size: 1.25em;
+  //line-height: 120%;
+  font-weight: $font_weight_title_normal;
+
+  border-bottom: solid 2px purple;
+}
+
+h4 {
+  font-size: 1.2em;
+  font-weight: $font_weight_title_bold;
+}
+
+a {
+  color: $link_color;
+
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+table {
+  border-spacing: 0;
+
+  th, td {
+    padding: 10px 0 10px 20px;
+  }
+
+  tr:not(:first-child) {
+    td {
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+  box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.3);
+  margin: 10px 0;
+}
+
+.button {
+  width: 500px;
+  @media (max-width: $breakpoint) {
+    width: 90%;
+  }
+  height: auto;
+  display: block;
+
+  margin: 40px auto;
+  padding: 10px;
+
+  font-size: 1em;
+  
+  text-align: center;
+  text-decoration: none;
+
+  color: black;
+  background-color: transparent;
+  border: solid 2px purple;
+  border-radius: 3px;
+
+  transition: all .2s ease-in-out 0s;
+
+  &:hover {
+    text-decoration: none;
+    background-color: purple;
+  }
+}
+
+.framed {
+  width: 100%;
+  height: auto;
+  padding: 28px;
+
+  border: solid 2px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+
+  * {
+    margin: 0;
+    padding: 0;
+
+    &:not(:first-child) {
+      margin-top: 16px;
+    }
+  }
+}

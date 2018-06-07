@@ -1,0 +1,44 @@
+@import "dimen_smartphone";
+@import "color";
+@import "z_index";
+
+@import "mixin";
+
+@import "list";
+
+@import "header";
+@import "outline";
+@import "footer";
+
+@import "scale";
+@import "current_line";
+@import "row_title";
+@import "period_view";
+@import "bus_view";
+
+@import "modal_window";
+@import "detail_modal_window";
+@import "visibility_modal_window";
+@import "link_modal_window";
+@import "snackbar";
+
+@import "https://fonts.googleapis.com/earlyaccess/notosansjp.css";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $root_font_size;
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: $font_weight_general;
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+}

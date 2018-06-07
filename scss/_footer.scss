@@ -1,0 +1,35 @@
+footer {
+  ul {
+    @extend .plain_list;
+
+    width: 50%;
+    @media (max-width: $smartphone-breakpoint) {
+      width: 100%;
+    }
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 16px;
+
+    a {
+      li {
+        color: $link_color;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  #android {
+    width: 50%;
+    @media (max-width: $smartphone-breakpoint) {
+      width: 100%;
+    }
+
+    margin-left: auto;
+    margin-right: auto;
+
+    border-top: 2px solid $divider_color;
+  }
+}

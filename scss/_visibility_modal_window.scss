@@ -1,0 +1,25 @@
+.modal_window_content {
+
+  #visibility_list {
+    @extend .plain_list;
+    
+    li {
+      @extend .divided_list_item;
+
+      div {
+        display: flex;
+        align-items: center;
+        padding: $list_vertical_padding 0;
+
+        span {
+          flex-grow: 1;
+          font-size: $list_font_size;
+        }
+
+        input {
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+}

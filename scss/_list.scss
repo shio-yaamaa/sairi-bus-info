@@ -1,0 +1,12 @@
+.plain_list {
+  list-style-type: none;
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
+}
+
+.divided_list_item {
+  &:not(:first-child) {
+    border-top: solid 1px $divider_color;
+  }
+}

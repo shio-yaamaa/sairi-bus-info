@@ -1,0 +1,20 @@
+.modal_window_content {
+
+  #link_list {
+    @extend .plain_list;
+
+    li {
+      @extend .divided_list_item;
+
+      div {
+        @include click_effect;
+        @include hover_effect;
+        padding: $list_vertical_padding 0;
+
+        span {
+          font-size: $list_font_size;
+        }
+      }
+    }
+  }
+}

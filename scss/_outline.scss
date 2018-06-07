@@ -1,0 +1,97 @@
+article {
+  margin-top: $header_height; /* for header */
+
+  .table {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+
+    > * {
+      display: table-cell;
+      vertical-align: top; /* bottom by default?? */
+      overflow-y: hidden; /* for IE */
+    }
+  }
+
+  #content_table {
+    height: auto;
+    padding-top: $scale_height; // for scale
+  }
+
+  .row_heading {
+    width: $row_heading_width;
+
+    .row_title {
+      width: 100%;
+      margin-top: $margin_between_rows;
+      padding-left: $row_title_padding;
+    }
+  }
+
+  .timeline {
+    position: relative; // for RuledView
+    overflow-x: auto;
+    white-space: nowrap;
+
+    #ruled_view {
+      position: absolute;
+      z-index: $rule_depth;
+    }
+
+    .row_content {
+      width: 100%;
+      margin-top: $margin_between_rows;
+    }
+
+    #classwork_content {
+      @extend .row_content;
+      position: relative;
+    }
+
+    #bus_content {
+      @extend .row_content;
+
+      .bus_section_content {
+        width: 100%;
+        height: auto;
+        padding-top: $main_title_line_height;
+
+        &:nth-child(n+2) {
+          margin-top: $margin_between_rows;
+        }
+
+        .bus_direction_content {
+          width: 100%;
+
+          .bus_lane {
+            width: 100%;
+            height: $bus_lane_width;
+            position: relative;
+          }
+        }
+      }
+    }
+
+    .main_content {
+      @extend .row_content;
+      padding-top: $main_title_line_height;
+
+      .sub_content {
+        position: relative;
+        width: 100%;
+        height: $period_view_without_name_height;
+      }
+    }
+  }
+
+  .classwork_row {
+    height: $period_view_with_name_height;
+  }
+
+}
+
+footer {
+  margin-top: $footer_margin_top;
+  padding: $footer_vertical_padding $footer_horizontal_padding;
+  box-shadow: 0 (-$shadow_shift) $shadow_fade $shadow_black;
+}

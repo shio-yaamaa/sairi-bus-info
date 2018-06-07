@@ -1,0 +1,43 @@
+.bus_wrapper {
+  @include click_effect;
+  height: 100%;
+  position: absolute;
+  top: 0;
+
+  > * {
+    position: absolute;
+  }
+
+  .bus_line {
+    width: 100%;
+    height: $bus_line_thickness;
+    top: ($bus_lane_width - $bus_line_thickness) / 2;
+    left: 0px;
+  }
+
+  .bus_circle {
+    width: $bus_circle_radius * 2;
+    height: $bus_circle_radius * 2;
+    top: ($bus_lane_width - $bus_circle_radius * 2) / 2;
+    margin-left: $bus_circle_radius * -1;
+    border-radius: 50%;
+
+    color: white;
+    font-size: $double_bus_font_size;
+    font-weight: bold;
+    text-align: center;
+    line-height: $bus_circle_radius * 2;
+  }
+
+  .micro_disease {
+    width: $micro_disease_size;
+    height: $micro_disease_size;
+    border-left: $micro_disease_border_width solid;
+    border-bottom: $micro_disease_border_width solid;
+    transform: rotate(-45deg);
+    transform-origin: 0% 100%;
+    left: 0;
+    top: $micro_disease_margin_top;
+  }
+
+}

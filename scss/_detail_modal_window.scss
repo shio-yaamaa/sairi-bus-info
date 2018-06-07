@@ -1,0 +1,48 @@
+.modal_window_content {
+
+  .detail_table {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 0;  // gap between cells
+
+    th, td {
+      text-align: right;
+      padding: $list_vertical_padding 0 $list_vertical_padding $margin_between_td;
+      &:first-child {
+        text-align: left;
+        padding-left: 0;
+      }
+    }
+
+    th {
+      font-size: $modal_window_table_header_font_size;
+      font-weight: normal;
+      color: $modal_window_table_header_font_color;
+    }
+
+    td {
+      border-top: 1px solid $divider_color;
+      font-size: $modal_window_table_data_font_size;
+    }
+  }
+
+  .annotation_ul {
+    list-style-type: none;
+    list-style-position: inside;
+    margin: $modal_window_vertical_margin 0 0;
+    padding: 0;
+    line-height: $annotation_line_height;
+
+    li {
+      font-size: $annotation_default_font_size;
+      color: gray;
+    }
+
+    .important_annotation {
+      font-size: $annotation_important_font_size;
+      font-weight: $font_weight_bold;
+      color: red;
+    }
+  }
+}

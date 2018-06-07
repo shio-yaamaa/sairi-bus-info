@@ -1,0 +1,122 @@
+@import "https://fonts.googleapis.com/earlyaccess/notosansjp.css";
+#toc {
+  width: 100%;
+  height: auto;
+  border: solid 2px rgba(0, 0, 0, 0.05);
+  border-radius: 3px; }
+  #toc li.toc-0, #toc li.toc-1, #toc li.toc-2, #toc li.toc-3, #toc li.toc-4 {
+    color: gray; }
+  #toc span.toc-0, #toc span.toc-1, #toc span.toc-2, #toc span.toc-3, #toc span.toc-4 {
+    color: #419df3; }
+    #toc span.toc-0:hover, #toc span.toc-1:hover, #toc span.toc-2:hover, #toc span.toc-3:hover, #toc span.toc-4:hover {
+      cursor: pointer;
+      text-decoration: underline; }
+  #toc li.toc-0 {
+    margin-left: 0px; }
+  #toc li.toc-1 {
+    margin-left: 12px; }
+  #toc li.toc-2 {
+    margin-left: 24px; }
+  #toc li.toc-3 {
+    margin-left: 36px; }
+  #toc li.toc-4 {
+    margin-left: 48px; }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+  font-size: 16px; }
+
+article {
+  width: 1000px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto; }
+  @media (max-width: 1080px) {
+    article {
+      width: 100%; } }
+
+@media (min-width: 1080px) {
+  h1, h2 {
+    margin-left: -40px;
+    margin-right: -40px; } }
+
+h1 {
+  font-size: 1.8em;
+  font-weight: 700; }
+
+h2 {
+  padding: 12px 20px;
+  font-size: 1.3em;
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-left: solid 5px purple; }
+  @media (min-width: 1080px) {
+    h2 {
+      padding-left: 35px; } }
+
+h3 {
+  padding: 5px 5px;
+  font-size: 1.25em;
+  font-weight: 500;
+  border-bottom: solid 2px purple; }
+
+h4 {
+  font-size: 1.2em;
+  font-weight: 700; }
+
+a {
+  color: #419df3;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+table {
+  border-spacing: 0; }
+  table th, table td {
+    padding: 10px 0 10px 20px; }
+  table tr:not(:first-child) td {
+    border-top: 1px solid rgba(0, 0, 0, 0.1); }
+
+img {
+  max-width: 100%;
+  box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.3);
+  margin: 10px 0; }
+
+.button {
+  width: 500px;
+  height: auto;
+  display: block;
+  margin: 40px auto;
+  padding: 10px;
+  font-size: 1em;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  background-color: transparent;
+  border: solid 2px purple;
+  border-radius: 3px;
+  transition: all .2s ease-in-out 0s; }
+  @media (max-width: 1080px) {
+    .button {
+      width: 90%; } }
+  .button:hover {
+    text-decoration: none;
+    background-color: purple; }
+
+.framed {
+  width: 100%;
+  height: auto;
+  padding: 28px;
+  border: solid 2px rgba(0, 0, 0, 0.05);
+  border-radius: 3px; }
+  .framed * {
+    margin: 0;
+    padding: 0; }
+    .framed *:not(:first-child) {
+      margin-top: 16px; }
+
+/*# sourceMappingURL=style_sub.css.map */

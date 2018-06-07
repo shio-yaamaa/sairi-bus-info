@@ -1,0 +1,31 @@
+.row_content {
+  position: relative;
+
+  .period_view_wrapper {
+    @include click_effect;
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .period_view_name {
+      display: block;
+      width: 100%;
+      height: $period_name_font_size;
+      margin-top: $period_view_vertical_margin;
+      font-size: $period_name_font_size;
+      line-height: $period_name_font_size;
+      text-align: center;
+    }
+
+    .period_band {
+      width: 100%;
+      height: $period_band_width;
+      margin-top: $period_view_vertical_margin;
+      background-color: red;
+    }
+
+  }
+
+}

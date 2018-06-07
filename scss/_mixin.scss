@@ -1,0 +1,14 @@
+@mixin hover_effect {
+  transition: all .1s ease-in-out 0s;
+  &:hover {
+    background-color: $hover_effect_background_color;
+  }
+}
+
+@mixin click_effect {
+  transition: all .5s ease-out 0s;
+  &:active {
+    background-color: $click_effect_background_color;
+  }
+  cursor: pointer;
+}

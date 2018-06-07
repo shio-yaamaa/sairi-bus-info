@@ -1,0 +1,83 @@
+#modal_window_background {
+  width: 100%;
+  height: $modal_window_background_height;
+  position: fixed;
+  top: $modal_window_background_overflow * -1;
+  left: 0;
+
+  display: none;
+
+  background-color: $modal_window_background_color;
+  z-index: $modal_window_background_depth;
+}
+
+.modal_window_container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: none;  // toggled to flex by js
+  justify-content: center;
+  align-items: center;
+
+  z-index: $modal_window_depth;
+
+  .modal_window {
+    width: $modal_window_width_px;
+    @media(max-width: $smartphone_breakpoint) {
+      width: $modal_window_width_percentage;
+    }
+    height: auto;
+    max-height: $modal_window_max_height;
+
+    overflow: auto;
+
+    background-color: white;
+    border-radius: $modal_window_border_radius;
+
+    .modal_window_title_bar {
+      width: $modal_window_width_px;
+      @media(max-width: $smartphone_breakpoint) { // the same as modal window's
+        width: $modal_window_width_percentage;
+      }
+      height: $modal_window_title_bar_height;
+      position: fixed;
+
+      padding: 0 $modal_window_padding;
+      border-radius: $modal_window_border_radius $modal_window_border_radius 0 0;
+      background-color: white;
+
+      display: flex;
+      align-items: center;
+
+      .modal_window_title {
+        width: auto;
+        height: auto;
+
+        flex-grow: 1;
+
+        font-size: $modal_window_title_font_size;
+        font-weight: $font_weight_bold;
+
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      i {
+        @include click_effect;
+        border-radius: $header_icon_border_radius;
+        opacity: $close_icon_opacity;
+      }
+
+    }
+
+    .modal_window_content {
+      width: 100%;
+      height: auto;
+      padding: $modal_window_title_bar_height $modal_window_padding $modal_window_padding;
+    }
+  }
+}
