@@ -1,7 +1,7 @@
 <?php
 
-require_once 'Time.class.php';
-require_once 'SQLiteDB.class.php';
+require_once __DIR__ . '/Time.class.php';
+require_once __DIR__ . '/SQLiteDB.class.php';
 
 $classworks = [];
 

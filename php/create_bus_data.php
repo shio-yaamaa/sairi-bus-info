@@ -1,16 +1,14 @@
 <?php
 
-require_once 'Constant.class.php';
-require_once 'SQLiteDB.class.php';
-require_once '../lib/phpQuery-onefile.php';
+require_once __DIR__ . '/Constant.class.php';
+require_once __DIR__ . '/SQLiteDB.class.php';
+require_once __DIR__ . '/../lib/phpQuery-onefile.php';
 
 $time = Time::get_current_date();
 
 $year = $time['year'];
 $month = $time['month'];
 $date = $time['date'];
-
-echo 'create_bus_data';
 
 SQLiteDB::clear_table(SQLiteDB::$TABLE_BUSES);
 

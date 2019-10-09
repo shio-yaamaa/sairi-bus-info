@@ -1,8 +1,8 @@
 <?php
 
-require_once 'Constant.class.php';
-require_once 'SQLiteDB.class.php';
-require_once '../lib/phpQuery-onefile.php';
+require_once __DIR__ . '/Constant.class.php';
+require_once __DIR__ . '/SQLiteDB.class.php';
+require_once __DIR__ . '/../lib/phpQuery-onefile.php';
 
 $time = Time::get_current_date();
 
@@ -20,7 +20,7 @@ SQLiteDB::clear_table(SQLiteDB::$TABLE_RESTAURANTS);
 foreach ($urls as $campus_name => $url) {
 
   $names = [];
-  $times = [];  // three-dimensional array [date[name[start or end]]]
+  $times = [];  // three-dimensional array [date[name[start, end]]]
   $dates = [];
 
   $this_month_string = ($month + 1) . '月';

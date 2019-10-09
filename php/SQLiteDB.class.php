@@ -1,6 +1,6 @@
 <?php
 
-require_once 'Time.class.php';
+require_once __DIR__ . '/Time.class.php';
 
 class SQLiteDB {
 
@@ -11,10 +11,11 @@ class SQLiteDB {
 
   private static $db = null;
 
-  public static function get_database($from_sub_directory=false) {
+  public static function get_database() {
     if (!self::$db) {
       try {
-        self::$db = new PDO('sqlite:' . ($from_sub_directory ? '../' : '') . 'sairibus.sqlite');
+        $db_path = realpath(__DIR__ . '/../sairibus.sqlite');
+        self::$db = new PDO('sqlite:' . $db_path);
         self::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       } catch (PDOException $e) {
         echo $e->getMessage();
@@ -184,20 +185,20 @@ class SQLiteDB {
   }
 
   public static function get_classwork_data() {
-    return self::get_database(true)
+    return self::get_database()
         ->query("SELECT * FROM " . self::$TABLE_CLASSWORKS)
         ->fetchAll(PDO::FETCH_ASSOC);
   }
 
   public static function get_bus_data() {
-    return self::get_database(true)
+    return self::get_database()
         ->query("SELECT * FROM " . self::$TABLE_BUSES)
         ->fetchAll(PDO::FETCH_ASSOC);
   }
 
   public static function get_library_data() {
     $date = Time::get_current_date();
-    return self::get_database(true)
+    return self::get_database()
         ->query("SELECT * FROM " . self::$TABLE_LIBRARIES
             . " WHERE year = " . $date['year'] . " AND month = " . $date['month'] . " AND date = " . $date['date'])
         ->fetchAll(PDO::FETCH_ASSOC);
@@ -205,7 +206,7 @@ class SQLiteDB {
 
   public static function get_restaurant_data() {
     $date = Time::get_current_date();
-    return self::get_database(true)
+    return self::get_database()
         ->query("SELECT * FROM " . self::$TABLE_RESTAURANTS
             . " WHERE year = " . $date['year'] . " AND month = " . $date['month'] . " AND date = " . $date['date'])
         ->fetchAll(PDO::FETCH_ASSOC);
