@@ -12,9 +12,9 @@ class Constant {
   public static $LIBRARY_RIKOU_URL = "https://www.library.osaka-u.ac.jp/rikou/schedule";
   public static $LIBRARY_GAIKOKU_URL = "https://www.library.osaka-u.ac.jp/gaikoku/schedule";
 
-  public static $RESTAURANT_TOYONAKA_URL = "http://www.osaka-univ.coop/info/02_2.html";
-  public static $RESTAURANT_SUITA_URL = "http://www.osaka-univ.coop/info/03_2.html";
-  public static $RESTAURANT_MINOH_URL = "http://www.osaka-univ.coop/info/04_2.html";
+  public static $RESTAURANT_TOYONAKA_URL = "https://www.osaka-univ.coop/info/02_2.html";
+  public static $RESTAURANT_SUITA_URL = "https://www.osaka-univ.coop/info/03_2.html";
+  public static $RESTAURANT_MINOH_URL = "https://www.osaka-univ.coop/info/04_2.html";
 
   public static $RESTAURANT_SHOP_URL = "http://www.osaka-u.ac.jp/ja/guide/student/general/welfare.html";
 
