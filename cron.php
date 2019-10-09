@@ -1,5 +1,9 @@
 #!/usr/bin/php
 <?php
+
+mb_language('Japanese');
+mb_internal_encoding('UTF-8');
+
 require_once 'lib/phpQuery-onefile.php';
 require_once 'php/Constant.class.php';
 require_once 'php/Utility.class.php';
