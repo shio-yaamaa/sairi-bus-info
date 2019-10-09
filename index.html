@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79743086-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-79743086-3');
+    </script>
+
     <meta charset="utf-8" />
     <title>再履バス案内</title>
     <meta content="大阪大学の再履バスなどの時間を表示します。" name="description" />
@@ -71,7 +80,6 @@
               <li id="annotation_micro_disease">微生物病研究所前(降車専用)に停車します</li>
               <li class="important_annotation" id="annotation_holiday">本日は休日です。運行しない可能性があります</li>
             </ul>
-            <div><a id="bus_tweet_link" target="_blank">このバスに乗っているとツイートする</a><div>
           </div>
         </div>
       </div>
@@ -100,10 +108,10 @@
       <div id="snackbar"></div>
     </article>
     <footer>
-      <ul>
+      <!--<ul>
         <a href="about"><li>このサイトについて</li></a>
         <a href="guide"><li>使い方</li></a>
-      </ul>
+      </ul>-->
       <div id="android">
         <p>
           Androidアプリ版「再履バス案内」も公開しています。<br>
@@ -121,9 +129,9 @@
     <script src="js/utility.js"></script>
     <script src="js/time.js"></script>
     <script src="js/general.js"></script>
-    <script src="js/cookie.js"></script>
+    <!--<script src="js/cookie.js"></script>-->
     <script src="js/holiday.js"></script>
-    <script src="js/tweet.js"></script>
+    <!--<script src="js/tweet.js"></script>-->
 
     <script src="js/header.js"></script>
     <script src="js/ruled_view.js"></script>
