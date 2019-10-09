@@ -36,7 +36,6 @@ $.getJSON(
   null,
   function (data) {
     classworkData = data;
-    console.log('class data is retrieved');
 
     // row title
     $('#classwork_title_container').append(createRowTitleWithoutSubTitle(
@@ -53,7 +52,6 @@ $.getJSON(
 ).fail(() => console.log('failed to obtain classwork data'));
 
 function showClasswork() {
-  console.log('showClasswork called');
   $.each(classworkData, function (index, classwork) {
     $('#classwork_content').append(
       createPeriodView(classwork, TYPE_CLASSWORK, CLASSWORK_COLOR)
@@ -68,7 +66,6 @@ $.getJSON(
   '../php/send_bus_data.php',
   null,
   function (data, status) {
-    console.log(data);
     busData = data;
 
     // number of lanes
@@ -80,8 +77,6 @@ $.getJSON(
         }, 0));
       });
     });
-
-    console.log(laneCounts);
 
     // row title
     $('#bus_title_container').append(createBusRowTitle(
@@ -116,7 +111,7 @@ $.getJSON(
 
     setBusFinished();
   }
-).fail(() => console.log('failed obtaining bus data'));
+).fail(() => console.log('failed to obtain bus data'));
 
 function showBus() {
   $.each(busData, function (sectionIndex, section) {

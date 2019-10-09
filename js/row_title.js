@@ -90,10 +90,7 @@ function createBusRowTitle(sectionNames, sectionColors, directionNames, directio
 }
 
 function adjustBusRowTitleHeight(laneCounts, busLaneWidth) {
-  console.log('busLaneWidth: ' + busLaneWidth);
-
   var flatLaneCounts = Array.prototype.concat.apply([], laneCounts);
-  console.log(flatLaneCounts);
   $('#bus_title_container').find('.row_sub_title_no_align').each(function (index, element) {
     $(element).css('height', busLaneWidth * flatLaneCounts[index]);
   });

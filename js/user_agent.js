@@ -12,8 +12,6 @@ if (ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') 
   userAgent = UA_PC;  // includes WindowsPhone and some other devices
 }
 
-console.log("User Agent is " + userAgent);
-
 function correspondToUa(pc, tablet, smartphone) {
   switch (userAgent) {
     case UA_PC:

@@ -21,7 +21,6 @@ function getNationalHolidays() {
       $.each(response['items'], function (index, element) {
         nationalHolidays.push(parseGoogleCalendarDate(element['start']['date']));
       });
-      console.log(nationalHolidays);
 
       setIsNationalHoliday();
     }
@@ -44,7 +43,6 @@ function setIsNationalHoliday() {
   }
   $.each(nationalHolidays, function (index, element) {
     if (element['month'] === today['month'] && element['date'] === today['date']) {
-      console.log("today is national holiday!");
       isHoliday = true;
       return false;
     }
@@ -53,6 +51,4 @@ function setIsNationalHoliday() {
 
 if (!isHoliday) {
   getNationalHolidays();
-} else {
-  console.log("it's weekend, so no need to check if today is national holiday");
 }
